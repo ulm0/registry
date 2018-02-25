@@ -27,7 +27,7 @@ docker:
     - apk add --no-cache bash make
     - echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
     - apk add --no-cache upx
-    - docker login --username $CI_REGISTRY_USER --password-stdin $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
     - make docker
   dependencies:
     - registry
