@@ -11,6 +11,7 @@ registry:
     GOARM: 6
   script:
     - apk add --no-cache git build-base file make
+    - chmod +x ci/distribution
     - make distribution
   artifacts:
     paths:
