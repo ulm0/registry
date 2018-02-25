@@ -6,14 +6,7 @@ BUILD_FLAGS=-ldflags '-s -w' -a
 default: build
 
 distribution: bin
-	go get -d github.com/docker/distribution/cmd/registry
-	cd /go/src/github.com/docker/distribution
-	git checkout v2.6.2
-	sed -i -e 's/=\$(VERSION)"/=\$(VERSION) -s -w" -a/g' Makefile
-	make binaries
-	file binaries/registry
-	cd -
-	cp /go/src/github.com/docker/distribution/bin/registry bin/registry
+	@./ci/distribution
 
 bin:
 	mkdir bin

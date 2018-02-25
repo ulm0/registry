@@ -10,7 +10,7 @@ registry:
     GOOS: linux
     GOARM: 6
   script:
-    - apk add --no-cache git build-base file make upx
+    - apk add --no-cache git build-base file make
     - make distribution
   artifacts:
     paths:
