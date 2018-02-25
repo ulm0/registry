@@ -11,7 +11,7 @@ bin:
 	mkdir bin
 
 compress: 
-	upx -qq --ultra-brute bin/registry
+	upx -qq --best bin/registry
 
 docker: image push
 
