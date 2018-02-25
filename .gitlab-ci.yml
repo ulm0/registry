@@ -1,6 +1,6 @@
 stages:
   - registry
-  # - image
+  - image
 
 registry:
   image: golang:alpine
