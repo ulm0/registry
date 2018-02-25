@@ -1,0 +1,19 @@
+stages:
+  - registry
+  # - image
+
+registry:
+  image: golang:alpine
+  stage: registry
+  variables:
+    GOARCH: arm
+    GOOS: linux
+    GOARM: 6
+  script:
+    - apk add --no-cache git build-base file make upx
+    - make distribution
+  artifacts:
+    paths:
+      - bin/registry
+
+
