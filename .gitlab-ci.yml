@@ -1,6 +1,6 @@
 stages:
   - registry
-  - image
+  - docker
 
 registry:
   image: golang:alpine
@@ -16,11 +16,11 @@ registry:
     paths:
       - bin/registry
 
-image:
+docker:
   image: docker:17.12
   services:
     - docker:17.12-dind
-  stage: image
+  stage: docker
   variables:
     DOCKER_DRIVER: overlay2
   script:
