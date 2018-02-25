@@ -10,11 +10,9 @@ registry:
     GOOS: linux
     GOARM: 6
   script:
-    - apk add --no-cache git build-base file make
-    - ls -lsh ci
-    # - make dist
+    - apk add --no-cache bash git build-base file make
+    - make dist
   artifacts:
     paths:
       - bin/registry
-
 
