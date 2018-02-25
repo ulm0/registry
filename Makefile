@@ -1,7 +1,7 @@
 DOCKER_IMAGE_VERSION=2
-DOCKER_IMAGE_NAME=r.innersea.xyz/ulm0/registry
+DOCKER_IMAGE_NAME=registry.gitlab.com/ulm0/registry
 DOCKER_IMAGE_TAGNAME=$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION)
-BUILD_FLAGS=-ldflags '-s -w' -a 
+BUILD_FLAGS=-ldflags '-s -w' -a
 
 default: build
 
