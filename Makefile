@@ -5,8 +5,8 @@ BUILD_FLAGS=-ldflags '-s -w' -a
 
 default: build
 
-distribution: bin
-	@./ci/distribution
+dist: bin
+	@./ci/dist
 
 bin:
 	mkdir bin
