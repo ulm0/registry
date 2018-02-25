@@ -1,8 +1,8 @@
-# rpi-registry
+# Docker Registry for ARM
 
 Docker Registry v2 image for ARMv6, based on the scratch image. The rest is taken from the official registry image.
 
-**Compose**
+## Compose
 
 Simply use `make`
 
@@ -20,6 +20,6 @@ The erase the generated binaries.
 
 > `make clean`
 
-**Usage**
+## Usage
 
 See: https://docs.docker.com/registry/deploying/
